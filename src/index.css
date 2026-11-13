@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+.bg-blueprint {
+  background-image: radial-gradient(rgba(204, 255, 0, 0.12) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.light-blueprint {
+  background-image: radial-gradient(rgba(17, 17, 17, 0.14) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.brutal-card-dark {
+  background: #12141D;
+  border: 2px solid #2A2E3D;
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.brutal-card-light {
+  background: #FFFFFF;
+  border: 2px solid #111111;
+  box-shadow: 5px 5px 0px #111111;
+}
+
+.brutal-btn {
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.brutal-btn:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px currentColor;
+}
+
+.brutal-btn:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px currentColor;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes radar-sweep {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.85;
+  }
+}
+
+@keyframes float-bounce {
+  0%, 100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(3deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 16s linear infinite;
+}
+
+.animate-radar {
+  animation: radar-sweep 4s linear infinite;
+  transform-origin: center;
+}
+
+.animate-float {
+  animation: float-bounce 3.2s ease-in-out infinite;
+}
+
+/* Custom Neo-Brutalist Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090A0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2E3D;
+  border: 1px solid #CCFF00;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CCFF00;
+}
