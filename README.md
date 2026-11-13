@@ -1,14 +1,14 @@
-# CRUMBLAB // Cookie Anatomy & RFC-6265 Telemetry Studio
+# CRUMBLAB - Cookie Anatomy & RFC-6265 Telemetry Studio
 
 ![CRUMBLAB Version](https://img.shields.io/badge/CRUMBLAB-v2.4_STUDIO-CCFF00?style=for-the-badge&labelColor=090A0F)
 ![RFC-6265](https://img.shields.io/badge/SPEC-RFC_6265-00F0FF?style=for-the-badge&labelColor=090A0F)
 ![Stack](https://img.shields.io/badge/STACK-NODE.JS_%2B_REACT_%2B_VITE-FF5E5B?style=for-the-badge&labelColor=090A0F)
 
-**CRUMBLAB** is a Neo-Brutalist developer workbench for inspecting HTTP cookies, decompiling inner JWT/Base64 payloads, auditing RFC-6265 security compliance, and transpiling between cookie formats.
+**CRUMBLAB** is a multi-functional developer workbench for inspecting HTTP cookies, decompiling inner JWT/Base64 payloads, auditing RFC-6265 security compliance, and transpiling between cookie formats.
 
 ---
 
-## ✨ Core Capabilities
+## Core Capabilities
 
 - **Universal Format Auto-Detection**
   - **Browser / DevTools JSON** (`EditThisCookie`, `Cookie-Editor`, Puppeteer/Playwright exports)
@@ -53,26 +53,4 @@ npm run build
 
 # Start production server
 npm start
-```
-
----
-
-## 🗂️ Project Structure
-
-```text
-├── index.html                        # Studio entry with Syne, Space Grotesk & Space Mono typography
-├── server/
-│   └── index.js                      # Express API server (/api/verify, /api/scan-url, /api/mock-auth)
-├── src/
-│   ├── App.jsx                       # Main CRUMBLAB Neo-Brutalist workbench UI
-│   ├── index.css                     # Blueprint backgrounds, brutalist shadows & radar animations
-│   ├── components/
-│   │   ├── CookieDetailPanel.jsx     # Specimen payload decompiler & RFC-6265 diagnostic panel
-│   │   ├── LiveVerifierPanel.jsx     # Live HTTP probe & redirect hop tracer
-│   │   └── ExportConverterPanel.jsx  # Multi-format serializer & valid-only filter
-│   └── utils/
-│       ├── cookieEngine.js           # Universal parser, JWT decoder, validator & exporter
-│       └── samplePresets.js          # Dynamic lab presets
-└── tests/
-    └── cookieEngine.test.js          # Automated test suite
 ```
